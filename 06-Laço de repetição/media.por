@@ -4,9 +4,8 @@ programa
 	funcao inicio()
 	{
 		inteiro cont=1
-		real numero, media
-		real soma=0.0
-
+		real numero=0.0, media=0.0, soma=0.0
+		
 		enquanto (cont <= 10){
 			limpa()
 
