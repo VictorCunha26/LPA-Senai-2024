@@ -1,5 +1,7 @@
 programa
 {
+	inclua biblioteca Matematica --> mat
+	
 	
 	funcao inicio()
 	{
@@ -14,6 +16,8 @@ programa
 	     real porcentBrancos
 	     real porcentNulos
 	     inteiro voto
+
+
 
 	     faca {
 	     	limpa()
@@ -57,7 +61,20 @@ programa
 	     total= candidatoA + candidatoB + brancos + nulos
 
 	     se(total>0){
-	     	porcentCandA = (
+	     	porcentCandA = ( candidatoA * 100.0)/total
+	     	porcentCandB = ( candidatoB * 100.0)/total
+	     	porcentBrancos = ( brancos * 100.0)/total
+	     	porcentNulos = ( nulos * 100.0)/total
+
+	     	escreva("\n")
+
+	     	escreva("Total de votos: ", total, "\n\n")
+	     	escreva("Candidato A: ", candidatoA, " voto(s).", mat.arredondar(porcentCandA, 2), " % do total\n")
+	     	escreva("Candidato B: ", candidatoB, " voto(s).", mat.arredondar(porcentCandB, 2), " % do total\n")
+	     	escreva("Brancos: ", brancos, " voto(s).", mat.arredondar(porcentBrancos, 2), " % do total\n")
+	     	escreva("Nulos: ", nulos, " voto(s).", mat.arredondar(porcentNulos, 2), " % do total\n")
+	     	
+
 	     }
 
 	     
@@ -68,7 +85,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 957; 
+ * @POSICAO-CURSOR = 1631; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
