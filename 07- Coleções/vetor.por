@@ -21,6 +21,8 @@ programa
 			
 		}
 
+		escreva("\nVetor na ordem inversa: \n")
+
 		para( inteiro p=9; p >=0; p--)
 		{
 			
@@ -34,7 +36,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 365; 
+ * @POSICAO-CURSOR = 368; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
