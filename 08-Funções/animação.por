@@ -22,60 +22,27 @@ programa
 
 				se (andando == 0) {
 
-					inteiro brancos = 1
+					branco(coluna *3 +14)
 
-					inteiro quantidade = coluna * 3 + 14
-
-					enquanto (brancos <= quantidade) {
-
-						escreva(" ")
-
-						brancos++
-
-					}
-
-					escreva("\\/\n")
-					brancos= 1
-					quantidade= coluna * 3
-					enquanto(brancos <= quantidade){
-						escreva(" ")
-						brancos++
-					}
+					escreva("\\ /\n")
+					branco(coluna *3)
 
 					escreva("( )( )( )( )(0.0)")
 
 				}
 
-				senao{
+				senao
+				
+				{
 
-					inteiro brancos = 1
-
-					inteiro quantidade = coluna * 3 + 7
-
-					enquanto (brancos <= quantidade) {
-
-						escreva(" ")
-
-						brancos++
-
-					}
+					branco(coluna * 3 + 7)
 
 					escreva("( )")
-					brancos= 1
-					quantidade= 4
-					enquanto(brancos <= quantidade){
-						escreva(" ")
-						brancos++
-					}
-
-					escreva("\\/\n")
-					brancos= 1
-					quantidade = coluna * 3+2
-					enquanto(brancos <= quantidade){
-						escreva(" ")
-						brancos++
-					}
-				escreva("( )( )( )( )(0.0)")
+					branco(6)
+					escreva("\\ /\n")
+					branco(coluna * 3+2)
+					
+				escreva("( )( ) ( )( )(0.0)")
 					
 				}
 
@@ -87,13 +54,30 @@ programa
 
 	}
 
+	funcao branco(inteiro quantidade )
+	{
+
+		inteiro brancos = 1
+
+
+		enquanto (brancos <= quantidade) 
+					
+		{
+
+			escreva(" ")
+			brancos++
+
+		}
+		
+	}
+
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 487; 
+ * @POSICAO-CURSOR = 543; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
