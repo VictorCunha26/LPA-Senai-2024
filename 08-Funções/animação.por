@@ -19,38 +19,15 @@ programa
 			para(inteiro andando = 0; andando <= 1; andando ++) {
 
 				limpa()
-
-				se (andando == 0) {
-
-					branco(coluna *3 +14)
-
-					escreva("\\ /\n")
-					branco(coluna *3)
-
-					escreva("( )( )( )( )(0.0)")
-
-				}
-
-				senao
-				
-				{
-
-					branco(coluna * 3 + 7)
-
-					escreva("( )")
-					branco(6)
-					escreva("\\ /\n")
-					branco(coluna * 3+2)
-					
-				escreva("( )( ) ( )( )(0.0)")
-					
-				}
-
+				desenhar_lagarta(coluna, andando)
 				u.aguarde(1000)
 
 			}
 
 		}
+
+		limpa()
+		desenhar_lagarta(coluna_final,0)
 
 	}
 
@@ -71,13 +48,43 @@ programa
 		
 	}
 
+	funcao desenhar_lagarta(inteiro coluna, inteiro andando){
+
+		se (andando == 0) {
+
+					branco(coluna *3 +14)
+
+					escreva("\\ /\n")
+					branco(coluna *3)
+
+					escreva("( )( )( )( )( 0.0 )")
+
+				}
+
+				senao
+				
+				{
+
+					branco(coluna * 3 + 7)
+
+					escreva("( )")
+					branco(4)
+					escreva("\\ /\n")
+					branco(coluna * 3+2)
+					
+				escreva("( )( ) ( )( 0.0 )")
+					
+				}
+	
+	}
+
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 543; 
+ * @POSICAO-CURSOR = 384; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
