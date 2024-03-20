@@ -22,7 +22,7 @@ programa
 		{
 			para(inteiro j=0; j<=500/20; j++)
 			{
-		g.desenhar_retangulo(i*20 + 20*m.cosseno(k*2*m.PI/360), j*20 + 20*m.seno(k*2*m.PI/360), 4, 4, falso, verdadeiro)
+		g.desenhar_retangulo(i*20 + 20*m.cosseno((k+j*20)*2*m.PI/360), j*20 + 20*m.seno((k + i*20)*2*m.PI/360), 4, 4, falso, verdadeiro)
 			}		
 		}
 		
@@ -40,7 +40,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 652; 
+ * @POSICAO-CURSOR = 615; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
