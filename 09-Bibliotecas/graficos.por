@@ -10,7 +10,17 @@ programa
 		g.iniciar_modo_grafico(verdadeiro)
 		g.definir_dimensoes_janela(500, 500)
 		g.definir_titulo_janela("Gráficos")
-		inteiro k= 0
+		
+		desenhar_ondas()
+
+
+		g.encerrar_modo_grafico()
+		
+	}
+
+	funcao desenhar_ondas(){
+		inteiro fase= 0
+		inteiro espacamento = 20
 		
 		enquanto(nao t.tecla_pressionada(t.TECLA_ESC))
 		{
@@ -18,21 +28,18 @@ programa
 		g.limpar()
 		g.definir_cor(g.COR_PRETO)
 		
-		para(inteiro i = 0; i<= 500/20; i++)
+		para(inteiro i = 0; i<= 500/espacamento; i++)
 		{
-			para(inteiro j=0; j<=500/20; j++)
+			para(inteiro j=0; j<=500/espacamento; j++)
 			{
-		g.desenhar_retangulo(i*20 + 20*m.cosseno((k+j*20)*2*m.PI/360), j*20 + 20*m.seno((k + i*20)*2*m.PI/360), 4, 4, falso, verdadeiro)
+		g.desenhar_retangulo(i*espacamento + espacamento*m.cosseno((fase+j*espacamento)*2*m.PI/360), j*espacamento+ espacamento*m.seno((fase+ i*espacamento)*2*m.PI/360), 4, 4, falso, verdadeiro)
 			}		
 		}
 		
 		g.renderizar()	
 		u.aguarde(5)
-		k++
+		fase++
 		}
-
-		g.encerrar_modo_grafico()
-		
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -40,7 +47,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 615; 
+ * @POSICAO-CURSOR = 416; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
